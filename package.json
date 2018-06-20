@@ -1,0 +1,10 @@
+{
+  "name": "serverless-sns",
+  "version": "0.1.0",
+  "description": "Serverless deployment sns",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.6.7"
+  }
+}

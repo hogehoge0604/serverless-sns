@@ -1,0 +1,30 @@
+service: serverless-sns
+
+custom: ${file(conf/custom.js)}
+
+provider:
+  name: aws
+  region: ${self:custom.region}
+  stage: dev
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - 'sns:Publish'
+      Resource:
+        Ref: CreateSNS
+
+functions:
+  notification:
+    handler: src/handler.execute
+    environment:
+      REGION: ${self:custom.region}
+      TOPIC_ARN:
+        Ref: CreateSNS
+
+resources:
+  Resources:
+    CreateSNS:
+      Type: AWS::SNS::Topic
+      Properties: 
+        DisplayName: ${self:custom.sns.displayname}
+        Subscription: ${self:custom.sns.subscription}
