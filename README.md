@@ -1,6 +1,6 @@
-# Serverless Firebase Push notifications
+# Serverless setup AWS SNS
 
-Building AWS SNS by use of serverless framework
+Setup AWS SNS by use of serverless framework
 
 ## Installation
 
