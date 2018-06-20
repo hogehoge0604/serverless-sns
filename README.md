@@ -40,7 +40,8 @@ module.exports = () => {
       }]
     }
   }
-}```
+}
+```
 
 | Edit place | Description |
 -------------|-------------|
